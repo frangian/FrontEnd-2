@@ -1,0 +1,16 @@
+*{
+    outline: red solid 1px;
+}
+header, footer {
+    display: flex;
+    justify-content: center;
+    background-color: red;
+}
+.arg{
+    background-color: aqua;
+}
+.int{
+    background-color: gray;
+}
+
+

@@ -1,0 +1,30 @@
+Palabras reservadas
+
+A partir de ES6 utilizamos las siguientes palabras reservadas para declarar nuestras variables.
+
+var
+El scope es su contexto de ejecución (en otras palabras, la variable vive dentro de la función en la cual es declarada). El scope de una variable declarada fuera de una función es global.
+
+let
+Gracias a esta se introduce el scope de bloque. Las variables asignadas con let solo son accesibles dentro de su bloque. Recordemos que el bloque es aquella porción de código que se encuentra definida entre llaves ({}), por ejemplo, dentro de un bloque if:
+
+        
+
+let color = "rojo"; if (color === "rojo") { let colorElegido = color; // Esta variable vive dentro del bloque if
+console.log("El color elegido es" + " " + colorElegido); // El color elegido es rojo
+}else{
+console.log(colorElegido); // Esto devolvería un error, ya que colorElegido no vive dentro del bloque else. 
+}
+        
+
+    
+Las variables declaradas fuera de un bloque de código tienen un scope global.
+
+const
+Su comportamiento es igual que el de let, salvo por la diferencia de que no se puede reasignar su valor. Su correcto uso minimiza el estado de mutación.
+
+Conclusiones
+Viendo todas estas funcionalidades y comportamientos que nos dan las palabras reservadas, podemos inferir la siguiente conclusión.
+
+Lo ideal al momento de declarar una variable es utilizar siempre la palabra reservada const, salvo que en algún momento necesitemos reasignar su valor. En esos casos, podemos implementar la palabra reservada let.
+Prácticamente no deberíamos utilizar la palabra var en nuestro código, sin embargo, si en algún momento nos vemos en la necesidad de utilizar dicha palabra reservada para que nuestro código funcione, entonces, quizás debamos pensar en refactorizar nuestro código para evitar tener que recurrir al uso de var.
